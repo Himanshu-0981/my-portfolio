@@ -3,13 +3,9 @@ import {AiFillGithub , AiOutlineTwitter } from 'react-icons/ai'
 
 const Footer = () => {
     return (
-        <div className='flex  '>
-            <div className='flex  text-2xl text-[#142a36]'>
-                <FaLinkedin />
-                <AiFillGithub />
-                <AiOutlineTwitter />              
-            </div>
-        </div>
+       <>
+    <hr class=" w-56 sm:w-72 h-0.5 mx-auto  bg-gray-100 border-0 rounded dark:bg-blue-600" />
+       </>
     )
 }
 

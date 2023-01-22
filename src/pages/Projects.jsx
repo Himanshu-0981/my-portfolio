@@ -1,9 +1,10 @@
 import React from 'react';
+import TopHeading from '../components/TopHeading';
 
 const Projects = () => {
     return (
         <>
-            Projects
+           <TopHeading title='PROJECTS'/>
         </>
     )
 }
