@@ -2,12 +2,15 @@ import React from 'react'
 import Button from './Button';
 
 const ProjectCards = (props) => {
-    const {poster,title} = props;
+    const {poster,projectTitle} = props;
     return (
-        <div>
-            <img src={poster} alt="project-img" className='w-96 pr-2 pl-2'/>
-            <button className='bg-blue-600 text-white w-full mt-1 pt-1 pb-1 pr-5 pl-5'>{title}</button>
-        </div>
+        <div className='flex justify-center flex-wrap mt-5    '>
+               <div className='p-2'>
+               <img src={poster} alt="" className=' h-64 rounded-lg'/>
+                <p>{projectTitle}</p>
+                <button className='bg-blue-600 p-1 w-full text-white rounded'>Visit Site </button>
+               </div>
+            </div>  
     )
 }
 

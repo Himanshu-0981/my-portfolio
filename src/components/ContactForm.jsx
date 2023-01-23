@@ -7,16 +7,16 @@ const ContactForm = () => {
             <div>
                 <form className="space-y-4 text-black mt-5 pr-6 pl-6">
                     <div>
-                        <label className="block mb-1 text-sm font-medium ">Your Name</label>
+                        <label className="block mb-1 text-sm font-medium ">Your Name*</label>
                         <input type="text" className=" bg-white text-black border text-sm rounded-lg block w-full p-2.5 border-gray-400 " placeholder="Marvin Allen" required />
                     </div>
                     <div>
-                        <label className="block mb-1 text-sm font-medium  ">Your Email</label>
+                        <label className="block mb-1 text-sm font-medium  ">Your Email*</label>
                         <input type="email" className=" bg-white text-black border text-sm rounded-lg block w-full p-2.5 border-gray-400" placeholder="marvinallen@gmail.com" required />
                     </div>
                     <div>
-                        <label className="block mb-1 text-sm font-medium  ">Subject</label>
-                        <input type="text" className=" bg-white text-black border text-sm rounded-lg  block w-full p-2.5 border-gray-400" placeholder="Let me know how can i help you !" required />
+                        <label className="block mb-1 text-sm font-medium  ">Subject*</label>
+                        <input type="text" className=" bg-white text-black border text-sm rounded-lg  block w-full p-2.5 border-gray-400" placeholder="subject" required />
                     </div>
                     <div className="sm:col-span-2">
                         <label className="block mb-1 text-sm font-medium">Your message</label>

@@ -9,16 +9,16 @@ import poster5 from '../assets/project-5.png'
 
 const Projects = () => {
     return (
-        <>
-           <TopHeading title='PROJECTS'/>
-           <div className='flex justify-center flex-col sm:flex sm:flex-row '>
-            <ProjectCards poster={poster1} title='click here'/>
-            <ProjectCards poster={poster2} title='click here'/>
-            <ProjectCards poster={poster3} title='click here'/>
-            <ProjectCards poster={poster4} title='click here'/>
-            <ProjectCards poster={poster5} title='click here'/>
-           </div>   
-        </>
+            <div className='flex justify-center flex-wrap mt-5  '>
+            <ProjectCards projectTitle='project 1' poster={poster1}/>
+            <ProjectCards projectTitle='project 2' poster={poster2}/>
+            <ProjectCards projectTitle='project 3' poster={poster3}/>
+            <ProjectCards projectTitle='project 4' poster={poster4}/>
+            <ProjectCards projectTitle='project 5' poster={poster5}/>
+            <ProjectCards projectTitle='project 6' poster={poster1}/>
+            <ProjectCards projectTitle='project 7' poster={poster2}/>
+            <ProjectCards projectTitle='project 8' poster={poster3}/>
+        </div>
     )
 }
 
