@@ -1,7 +1,5 @@
 import React from "react";
-import TopHeading from "../components/TopHeading";
 import contactImg from "../assets/about_me.jpg";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {

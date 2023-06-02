@@ -1,14 +1,21 @@
-const Button = ({ title, bg, handleClick, icon, width, flex, hover }) => {
+const Button = ({
+  title,
+  bg,
+  handleClick,
+  icon,
+  width,
+  flex,
+  hover,
+  others,
+}) => {
   return (
     <>
       <button
-        className={`text-white ${bg} ${width} ${flex} ${
-          "hover:" + hover
-        } pt-1 pb-1 pr-5 pl-5 mt-6 mr-1 ml-1 rounded font-normal text-base  transition-all`}
+        className={`text-white ${bg} ${width} ${flex} ${`hover:${hover}`} ${others} pt-1 pb-1 pr-5 pl-5  rounded-full font-normal text-base  transition-all`}
         onClick={handleClick}
       >
-        {title}
-        {icon}
+        <section>{title}</section>
+        <section className="ml-2">{icon}</section>
       </button>
     </>
   );
