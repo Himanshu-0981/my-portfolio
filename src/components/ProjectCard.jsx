@@ -1,17 +1,31 @@
-import React from 'react'
-import Button from './Button';
+import { FiArrowUpRight } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
-const ProjectCards = (props) => {
-    const {poster,projectTitle} = props;
-    return (
-        <div className='flex justify-center flex-wrap mt-5    '>
-               <div className='p-2'>
-               <img src={poster} alt="" className=' h-64 rounded-lg'/>
-                <p>{projectTitle}</p>
-                <button className='bg-blue-600 p-1 w-full text-white rounded'>Visit Site </button>
-               </div>
-            </div>  
-    )
-}
+import Button from "./Button";
+
+const ProjectCards = ({ poster, title, icon, paragraph }) => {
+  return (
+    <div className="max-w-4xl grid grid-cols-2 gap-1 items-center mb-10">
+      <img src={poster} alt="img" className="w-96 object-cover rounded-xl" />
+      <div>
+        <p className="text-sm">{paragraph}</p>
+        <div className="flex ">
+          <Button
+            title={"Visit Site"}
+            bg={"bg-blue-600"}
+            hover={"bg-blue-500"}
+            flex={"flex flex-center items-center"}
+            icon={<FiArrowUpRight size={18} />}
+          />
+          <Button
+            title={"Github  > "}
+            bg={"bg-black"}
+            flex={"flex flex-center items-center"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ProjectCards;

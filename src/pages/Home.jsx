@@ -11,17 +11,22 @@ const Home = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-32 mb-32">
+    <div className="flex justify-center items-center mt-32 mb-32 ">
       <div className="font-semibold text-4xl text-[#142a36] text-center sm:mr-14 sm:text-start ">
         <div className="mt-1">Hi, </div>
         <div className="mt-2">
-          i am{" "}
+          I am{" "}
           <span className="text-blue-600 underline underline-offset-8">
             Himanshu
           </span>
         </div>
         <div className="mt-3 ">Full stack Developer.</div>
-        <Button title="contact" bg="bg-blue-600" handleClick={gotoPage} />
+        <Button
+          title="contact"
+          bg="bg-blue-600"
+          hover={"bg-blue-500"}
+          handleClick={gotoPage}
+        />
       </div>
       <div className="hidden sm:block sm:ml-14 bg-blue-600 rounded-3xl">
         <img src={mainImg} alt="img" className="h-72 " />
