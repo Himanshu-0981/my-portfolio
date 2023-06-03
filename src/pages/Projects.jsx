@@ -15,7 +15,7 @@ const Projects = () => {
     <>
       <TopHeading title="Projects" />
       <main className="mt-5 flex  justify-center">
-        <div className="flex flex-col max-w-6xl ">
+        <div className="flex justify-center flex-wrap lg:flex-col  max-w-6xl ">
           <ProjectCards
             title={"Youtube Clone"}
             icon={<BsYoutube color="red" />}
@@ -25,11 +25,11 @@ const Projects = () => {
             }
           />
           <ProjectCards
-            title={"Google Search Engine Clone"}
+            title={"Google Search Engine"}
             icon={<FcGoogle />}
             poster={projectGoogle}
             paragraph={
-              "Created a Google search engine clone using React.js, replicating core functionalities like search suggestions and result pagination. Demonstrated proficiency in React.js and problem-solving skills in web development, showcasing creativity and coding abilities."
+              "Developed a Google search engine clone using React.js, replicating core functionalities such as search suggestions, responsive design, and real-time search updates. Demonstrated proficiency in React.js and problem-solving skills in web development, showcasing creativity, adaptability, meticulousness, and strong coding abilities."
             }
           />
           <ProjectCards
