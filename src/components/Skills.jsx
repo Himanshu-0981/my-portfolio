@@ -27,7 +27,7 @@ const Skills = () => {
         <TopHeading title="Tech Stack" />
         <TopHeading
           title="Technology that i've been worked on"
-          styleClass={"no-underline text-sm"}
+          styleClass={"no-underline text-[10px] sm:text-base font-normal"}
         />
         <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 ">
           <TechStack title={"Html"} icon={htmlIcon} />
