@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort, BsGithub, BsTwitter } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 
-
-
+import linkedIn from "../assets/linkedin.svg";
 
 import "../../styles/Home.css";
 import mainImg from "../assets/main_img.png";
@@ -45,24 +44,27 @@ const Home = () => {
               others={"mt-3 p-0"}
               handleClick={gotoPage}
             />
-            <section className="flex ml-4 text-xl mt-3 cursor-pointer justify-center space-x-6 sm:space-x-2">
+            <section className="flex items-center ml-4 text-xl mt-3 cursor-pointer justify-center space-x-6 sm:space-x-2">
+              <section
+                onClick={() =>
+                  navigate(
+                    window.open("https://www.linkedin.com/in/himanshu0001/")
+                  )
+                }
+              >
+                <img src={linkedIn} alt="" className="h-12" />
+              </section>
               <BsGithub
+                size={30}
                 onClick={() =>
                   navigate(window.open("https://github.com/Himanshu-0981"))
                 }
               />
               <BsTwitter
+                size={30}
                 color="#2563eb"
                 onClick={() =>
                   navigate(window.open("https://twitter.com/marvinn0001"))
-                }
-              />
-              <AiFillLinkedin
-                color="#0077b5"
-                onClick={() =>
-                  navigate(
-                    window.open("https://www.linkedin.com/in/himanshu0001/")
-                  )
                 }
               />
             </section>
