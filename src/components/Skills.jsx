@@ -1,5 +1,3 @@
-import React from "react";
-
 import TopHeading from "./TopHeading";
 import TechStack from "./TechStack";
 
@@ -24,26 +22,30 @@ import postmanIcon from "../assets/icons8-postman.svg";
 
 const Skills = () => {
   return (
-    <main className="bg-[#2563eb] p-20">
-      <section className="bg-white rounded-lg pb-10 pt-10">
+    <main className="bg-[#2563eb] p-3 sm:p-5 w-450:p-20 md:p-20">
+      <section className="bg-white rounded-lg pb-10 pt-5">
         <TopHeading title="Tech Stack" />
-        <section className="flex justify-center space-x-5">
+        <TopHeading
+          title="Technology that i've been worked on"
+          styleClass={"no-underline text-sm"}
+        />
+        <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 ">
           <TechStack title={"Html"} icon={htmlIcon} />
           <TechStack title={"Css"} icon={cssIcon} />
           <TechStack title={"Tailwind"} icon={tailwindIcon} />
           <TechStack title={"Javascript"} icon={jsIcon} />
-          <TechStack title={"React Js"} icon={reactIcon} />
-          <TechStack title={"Next Js"} icon={nextJSIcon} />
-          <TechStack title={"Redux"} icon={reduxIcon} />
+          <TechStack title={"ReactJS"} icon={reactIcon} />
+          <TechStack title={"NextJS"} icon={nextJSIcon} />
+          {/* <TechStack title={"Redux"} icon={reduxIcon} /> */}
         </section>
-        <section className="flex justify-center space-x-5">
-          <TechStack title={"Node Js"} icon={nodeJsIcon} />
-          <TechStack title={"Express Js"} icon={expressIcon} />
-          <TechStack title={"Mongo DB"} icon={mongoDBIcon} />
+        <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 ">
+          <TechStack title={"NodeJS "} icon={nodeJsIcon} />
+          <TechStack title={"ExpressJS "} icon={expressIcon} />
+          <TechStack title={"MongoDB"} icon={mongoDBIcon} />
           <TechStack title={"Mongoose"} icon={mongooseIcon} />
           <TechStack title={"Firebase"} icon={firebaseIcon} />
         </section>
-        <section className="flex justify-center space-x-5">
+        <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5">
           <TechStack title={"Vs Code"} icon={vsCodeIcon} />
           <TechStack title={"Git"} icon={gitIcon} />
           <TechStack title={"Github"} icon={githubIcon} />

@@ -1,33 +1,23 @@
-import React from 'react'
+import React from "react";
 
-
-
-const TechStack = ({title,icon}) => {
+const TechStack = ({ title, icon }) => {
   return (
     <main>
-         <section className="flex flex-wrap justify-center space-x-14 mt-10 ">
-        <section className="flex flex-col items-center text-white font-semibold">
+      <section className="flex justify-center space-x-14 mt-10 ">
+        <section className="flex flex-col items-center text-white text-[0px] md:text-sm">
           <img
             src={icon}
             alt="JavaScript Icon"
-            className="w-20 h-20 m-2 p-5 bg-[#e0e0e0] rounded-lg"
+            className="w-8 h-8 p-1 xs:w-12 xs:h-12 xs:p-2 sm:w-12 sm:h-12 sm:p-2 md:w-14 md:h-14 md:m-2 md:p-3 bg-[#e0e0e0] rounded-lg"
           />
-          <p className='text-[#142a36]'>{title}</p>
+          <p className="text-[#142a36]">{title}</p>
         </section>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default TechStack
-
-
-
-
-
-
-
-
+export default TechStack;
 
 /**
  * 

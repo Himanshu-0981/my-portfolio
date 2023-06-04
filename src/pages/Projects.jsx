@@ -13,7 +13,7 @@ import projectMovie from "../assets/movie.png";
 const Projects = () => {
   return (
     <>
-      <TopHeading title="Projects" />
+      <TopHeading title="PROJECTS" />
       <main className="mt-5 flex  justify-center">
         <div className="flex justify-center flex-wrap lg:flex-col  max-w-6xl ">
           <ProjectCards
