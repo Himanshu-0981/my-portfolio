@@ -9,6 +9,9 @@ import "../../styles/Home.css";
 import mainImg from "../assets/main_img.png";
 import Button from "../components/Button";
 import Skills from "../components/Skills";
+import About from "../pages/About";
+import Projects from "./Projects";
+import Contact from "../pages/Contact";
 
 const Home = () => {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -79,6 +82,9 @@ const Home = () => {
         </div>
       </section>
       <Skills />
+      <About />
+      <Projects />
+      <Contact />
     </main>
   );
 };

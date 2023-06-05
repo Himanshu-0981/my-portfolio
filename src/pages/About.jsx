@@ -6,12 +6,12 @@ import AboutMeText from "../components/AboutMeText";
 const About = () => {
   return (
     <>
-      <TopHeading title="ABOUT ME" />
-      <div className="flex justify-center items-center mt-12 sm:mt-24 mb-24 ">
-        <div className="hidden sm:block sm:mr-14 bg-blue-600 rounded-3xl">
-          <img src={mainImg} alt="img" className="h-72 " />
+      <TopHeading title="ABOUT ME" styleClass={"pt-5 pb-10"} />
+      <div className="flex justify-center items-center mb-24 ">
+        <div className="hidden sm:block  md:mr-5 lg:mr-20 bg-blue-600 rounded-3xl">
+          <img src={mainImg} alt="img" className="h-60 w-fit md:h-72 " />
         </div>
-        <div className="w-[32rem] text-center  mr-10 ml-10 sm:text-start sm:ml-14 ">
+        <div className="w-[32rem] text-center  mr-5 ml-5 sm:text-start ">
           <AboutMeText />
         </div>
       </div>

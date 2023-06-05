@@ -1,14 +1,15 @@
 import { FiArrowUpRight } from "react-icons/fi";
 
 import Button from "./Button";
+import "../../styles/CustomShadow.css";
 
 const ProjectCards = ({ poster, title, icon, paragraph }) => {
   return (
-    <div className="shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] m-2 p-2 xs:p-6  rounded-lg  lg:max-w-4xl md:flex md:flex-col lg:grid lg:grid-cols-2 lg:gap-10 items-center mb-10">
+    <div className="custom-shadow transition-all delay-75 m-2 p-0 xs:p-2 w-370:p-4 sm:p-6  rounded-lg w- md:flex md:flex-col lg:grid lg:grid-cols-2 lg:gap-10 items-center mb-10">
       <img
         src={poster}
         alt="img"
-        className="w-60 xs:w-72 md:w-96 object-cover rounded-xl"
+        className="w-60 xs:w-72 md:w-80 object-cover rounded-xl border"
       />
       <div>
         <div className="text-xs sm:text-base md:text-xl font-semibold flex items-center space-x-2 lg:mt-0 mt-5">

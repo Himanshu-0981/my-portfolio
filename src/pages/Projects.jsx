@@ -12,10 +12,13 @@ import projectMovie from "../assets/movie.png";
 
 const Projects = () => {
   return (
-    <>
-      <TopHeading title="PROJECTS" />
-      <main className="mt-5 flex  justify-center">
-        <div className="flex justify-center flex-wrap lg:flex-col  max-w-6xl ">
+    <main className="bg-blue-500 p-1 xs:p-3 sm:p-5 w-450:p-16 md:p-16 ">
+      
+      <main className=" flex justify-center bg-white rounded-lg relative">
+        <section className="absolute mb-5">
+        <TopHeading title="PROJECTS" styleClass={" "} />
+        </section>
+        <div className="flex justify-center flex-wrap lg:flex-co rounded-lg mt-20">
           <ProjectCards
             title={"Youtube Clone"}
             icon={<BsYoutube color="red" />}
@@ -50,7 +53,7 @@ const Projects = () => {
           />
         </div>
       </main>
-    </>
+    </main>
   );
 };
 

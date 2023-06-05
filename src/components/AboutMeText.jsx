@@ -1,7 +1,7 @@
 function AboutMeText() {
   return (
     <>
-      <p className="text-[#142a36]">
+      <p className="text-[#142a36] text-sm">
         <span className="text-2xl font-semibold"> Hey👋</span> I'm{" "}
         <span className="font-semibold text-red-500"> Himanshu Tiwari</span>, a{" "}
         <span className="font-semibold text-red-500">BCA graduate</span> seeking

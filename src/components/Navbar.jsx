@@ -26,7 +26,7 @@ const Navbar = () => {
   const goToHome = () => navigate("/");
 
   return (
-    <div className="shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] pt-3 pb-3">
+    <div className="shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] pt-3 pb-3 text-sm">
       <nav className="text-center flex justify-around items-center  sm:flex sm:justify-around p-1 ">
         <div
           className="font-medium text-[#142a36] cursor-pointer"
