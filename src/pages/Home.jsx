@@ -21,8 +21,8 @@ const Home = () => {
   useEffect(() => setShowAnimation(true), []);
 
   return (
-    <main>
-      <section className="relative flex justify-center items-center mt-32 mb-44 z-10">
+    <main style={{ marginTop: "64px" }}>
+      <section className="relative flex justify-center items-center mt-32 mb-48 z-10">
         <div
           className={`font-semibold text-3xl sm:text-4xl text-[#142a36] text-center sm:mr-14 sm:text-start transform ${
             showAnimation ? "translate-x-0" : "-translate-x-full"
@@ -47,7 +47,7 @@ const Home = () => {
               others={"mt-3 p-0"}
               handleClick={gotoPage}
             />
-            <section className="flex items-center ml-4 text-xl mt-3 cursor-pointer justify-center space-x-6 sm:space-x-2">
+            <section className="relative flex items-center ml-4 text-xl mt-3 cursor-pointer justify-center space-x-6 sm:space-x-2">
               <section
                 onClick={() =>
                   navigate(

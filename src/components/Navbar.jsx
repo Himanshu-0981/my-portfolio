@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiFillCloseCircle } from "react-icons/ai";
+
+import '../../styles/Navbar.css'
 
 const Navbar = () => {
   const navLinkStyles = ({ isActive }) => {
@@ -13,20 +15,38 @@ const Navbar = () => {
   };
 
   const [toggle, setToggle] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
   const handleToggle = () => {
-    setToggle(!toggle); //  use to toggle the menu bar
+    setToggle(!toggle);
   };
 
   const handleMenuClick = () => {
-    setToggle(false); // Close the menu after clicking a menu item
+    setToggle(false);
   };
 
   const navigate = useNavigate();
 
   const goToHome = () => navigate("/");
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = 200;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > threshold) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] pt-3 pb-3 text-sm">
+    <div className={`pt-3 pb-3 text-sm ${isSticky ? "sticky top-0 bg-white shadow-md" : "shadow-md"}`} style={{zIndex:100}}>
       <nav className="text-center flex justify-around items-center  sm:flex sm:justify-around p-1 ">
         <div
           className="font-medium text-[#142a36] cursor-pointer"
@@ -48,7 +68,7 @@ const Navbar = () => {
             <NavLink
               style={navLinkStyles}
               to="/about"
-              onClick={handleMenuClick} //  Close the menu on click
+              onClick={handleMenuClick}
             >
               About
             </NavLink>

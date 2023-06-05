@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <TopHeading title="ABOUT ME" styleClass={"pt-5 pb-10"} />
-      <div className="flex justify-center items-center mb-24 ">
+      <div className="flex justify-center items-center mb-24 mt-5">
         <div className="hidden sm:block  md:mr-5 lg:mr-20 bg-blue-600 rounded-3xl">
           <img src={mainImg} alt="img" className="h-60 w-fit md:h-72 " />
         </div>

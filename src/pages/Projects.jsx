@@ -16,9 +16,9 @@ const Projects = () => {
       
       <main className=" flex justify-center bg-white rounded-lg relative">
         <section className="absolute mb-5">
-        <TopHeading title="PROJECTS" styleClass={" "} />
+        <TopHeading title="PROJECTS" styleClass={"pt-5"} />
         </section>
-        <div className="flex justify-center flex-wrap lg:flex-co rounded-lg mt-20">
+        <div className="flex justify-center flex-wrap lg:flex-co rounded-lg mt-20 pt-10">
           <ProjectCards
             title={"Youtube Clone"}
             icon={<BsYoutube color="red" />}
