@@ -12,11 +12,10 @@ import projectMovie from "../assets/movie.png";
 
 const Projects = () => {
   return (
-    <main className="bg-blue-500 p-1 xs:p-3 sm:p-5 w-450:p-16 md:p-16 ">
-      
-      <main className=" flex justify-center bg-white rounded-lg relative">
+    <main className="bg-blue-500 p-1 xs:p-3 sm:p-5 w-450:p-16 md:p-16">
+      <main className=" flex justify-center bg-white rounded-lg relative mt-10">
         <section className="absolute mb-5">
-        <TopHeading title="PROJECTS" styleClass={"pt-5"} />
+          <TopHeading title="PROJECTS" styleClass={"pt-5"} />
         </section>
         <div className="flex justify-center flex-wrap lg:flex-co rounded-lg mt-20 pt-10">
           <ProjectCards

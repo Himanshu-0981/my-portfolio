@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort, BsGithub, BsTwitter } from "react-icons/bs";
-import { AiFillLinkedin } from "react-icons/ai";
 
 import linkedIn from "../assets/linkedin.svg";
 

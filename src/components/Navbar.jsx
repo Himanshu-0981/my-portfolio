@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiFillCloseCircle } from "react-icons/ai";
 
-import '../../styles/Navbar.css'
+import "../../styles/Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   const navLinkStyles = ({ isActive }) => {
     return {
       color: isActive ? "rgb(37 99 235)" : "",
@@ -17,36 +17,44 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
-
-  const handleMenuClick = () => {
-    setToggle(false);
-  };
-
   const navigate = useNavigate();
-
   const goToHome = () => navigate("/");
+
+  const handleToggle = () => setToggle(!toggle);
+  const handleMenuClick = () => setToggle(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const threshold = 200;
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > threshold) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      if (scrollTop > threshold) setIsSticky(true);
+      else setIsSticky(false);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleNavScroll = () => {
+      const positionY = window.scrollY;
+      if (positionY > 30) handleMenuClick();
+      if (positionY === 40)
+        window.removeEventListener("scroll", handleNavScroll);
+    };
+
+    window.addEventListener("scroll", handleNavScroll);
+  }, []);
+
   return (
-    <div className={`pt-3 pb-3 text-sm ${isSticky ? "sticky top-0 bg-white shadow-md" : "shadow-md"}`} style={{zIndex:100}}>
+    <div
+      className={`pt-3 pb-3 text-sm ${
+        isSticky ? "sticky top-0 bg-white shadow-md" : "shadow-md"
+      }`}
+      style={{ zIndex: 100 }}
+    >
       <nav className="text-center flex justify-around items-center  sm:flex sm:justify-around p-1 ">
         <div
           className="font-medium text-[#142a36] cursor-pointer"
@@ -61,7 +69,7 @@ const Navbar = () => {
               : "translate-y-0 transition-transform"
           }  w-full sm:w-48 sm:relative sm:inline-block sm:-translate-y-0 }`}
         >
-          <ul className="text-white flex flex-col sm:flex-row pb-5 pt-5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-[#142a36] sm:text-[#142a36] sm:bg-white ">
+          <ul className="text-white flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-[#142a36] sm:text-[#142a36] sm:bg-white ">
             <NavLink style={navLinkStyles} to="/" onClick={handleMenuClick}>
               Home
             </NavLink>
@@ -98,6 +106,6 @@ const Navbar = () => {
       </nav>
     </div>
   );
-};
+}
 
 export default Navbar;
