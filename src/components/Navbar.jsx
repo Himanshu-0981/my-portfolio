@@ -41,10 +41,7 @@ function Navbar() {
     const handleNavScroll = () => {
       const positionY = window.scrollY;
       if (positionY > 30) handleMenuClick();
-      if (positionY === 40)
-        window.removeEventListener("scroll", handleNavScroll);
     };
-
     window.addEventListener("scroll", handleNavScroll);
   }, []);
 
