@@ -3,7 +3,6 @@ import React from "react";
 import contactImg from "../assets/about_me.jpg";
 import ContactForm from "../components/ContactForm";
 import TopHeading from "../components/TopHeading";
-
 const Contact = () => {
   return (
     <>

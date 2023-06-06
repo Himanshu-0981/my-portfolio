@@ -1,8 +1,6 @@
-import React from "react";
 import mainImg from "../assets/main_img.png";
 import TopHeading from "../components/TopHeading";
 import AboutMeText from "../components/AboutMeText";
-
 const About = () => {
   return (
     <>
