@@ -46,8 +46,8 @@ function Navbar() {
   }, []);
 
   return (
-    <div
-      className={`pt-3 pb-3 text-sm ${
+    <main
+      className={`pt-3 pb-3  ${
         isSticky ? "sticky top-0 bg-white shadow-md" : "shadow-md"
       }`}
       style={{ zIndex: 100 }}
@@ -60,13 +60,14 @@ function Navbar() {
           Portfolio.io
         </div>
         <div
+          style={{ zIndex: 10 }}
           className={`absolute top-0 right-0 text-center ${
             !toggle
               ? " -translate-y-48 transition-transform"
               : "translate-y-0 transition-transform"
           }  w-full sm:w-48 sm:relative sm:inline-block sm:-translate-y-0 }`}
         >
-          <ul className="text-white flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-[#142a36] sm:text-[#142a36] sm:bg-white ">
+          <ul className=" text-white flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-[#142a36] sm:text-[#142a36] sm:bg-white space-y-3 sm:space-y-0">
             <NavLink style={navLinkStyles} to="/" onClick={handleMenuClick}>
               Home
             </NavLink>
@@ -93,15 +94,15 @@ function Navbar() {
             </NavLink>
           </ul>
         </div>
-        <div className="flex sm:hidden z-10" onClick={handleToggle}>
+        <section className="flex sm:hidden z-20 " onClick={handleToggle}>
           {!toggle ? (
             <AiOutlineMenu className="text-[#142a36]" />
           ) : (
             <AiFillCloseCircle className="text-white" />
           )}
-        </div>
+        </section>
       </nav>
-    </div>
+    </main>
   );
 }
 
