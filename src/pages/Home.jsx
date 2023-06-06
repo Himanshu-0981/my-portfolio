@@ -21,8 +21,8 @@ const Home = () => {
 
   return (
     <>
-      <main style={{ marginTop: "64px" }} className="w-screen">
-        <section className="relative flex justify-center items-center mt-32 mb-48 z-10">
+      <main style={{ marginTop: "64px" }} className="">
+        <section className=" relative flex justify-center items-center pt-32 pb-60 z-10">
           <div
             className={`font-semibold text-3xl sm:text-4xl text-[#142a36] text-center sm:mr-14 sm:text-start transform ${
               showAnimation ? "translate-x-0" : "-translate-x-full"
