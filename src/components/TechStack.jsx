@@ -1,5 +1,3 @@
-import React from "react";
-
 const TechStack = ({ title, icon }) => {
   return (
     <main>

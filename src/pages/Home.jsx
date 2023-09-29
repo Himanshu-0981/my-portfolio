@@ -1,39 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort, BsGithub, BsTwitter } from "react-icons/bs";
-
-import linkedIn from "../assets/linkedin.svg";
+import Lottie from "lottie-react";
 
 import "../../styles/Home.css";
-import mainImg from "../assets/main_img.png";
+import linkedIn from "../assets/linkedin.svg";
 import Button from "../components/Button";
 import Skills from "../components/Skills";
 import About from "../pages/About";
 import Projects from "./Projects";
 import Contact from "../pages/Contact";
+import blob from "../json/lottie_blob.json";
+import mainImg from "../assets/main_img.png";
+import HeroImage from "../components/HeroImage";
 
 const Home = () => {
-  const [showAnimation, setShowAnimation] = useState(false);
-
   const navigate = useNavigate();
   const gotoPage = () => navigate("/contact");
-  useEffect(() => setShowAnimation(true), []);
 
   return (
     <>
       <main style={{ marginTop: "64px" }} className="">
-        <section className=" relative flex justify-center items-center pt-32 pb-60 z-10">
-          <div
-            className={`font-semibold text-3xl sm:text-4xl text-[#142a36] text-center sm:mr-14 sm:text-start transform ${
-              showAnimation ? "translate-x-0" : "-translate-x-full"
-            } transition-transform duration-1000 ease-in`}
-          >
-            <h1 className="mt-1">Hi, </h1>
+        <section className=" relative flex justify-center items-center  z-10 pb-60">
+          <div className="font-semibold  sm:text-4xl text-[#142a36] text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
+            <h1 className="mt-1 text-5xl">Hi, </h1>
             <div className="mt-2">
-              I am{" "}
-              <span className="text-blue-600 underline underline-offset-8">
-                Himanshu
-              </span>
+              I am <span className="text-blue-600 ">Himanshu</span>
             </div>
             <div className="mt-3 ">Full stack Developer.</div>
             <section className="items-center block sm:flex">
@@ -73,14 +65,9 @@ const Home = () => {
               </section>
             </section>
           </div>
-          <div
-            className={`hidden sm:block sm:ml-14 bg-blue-600 rounded-3xl transform ${
-              showAnimation ? "translate-x-0" : "translate-x-full"
-            } transition-transform duration-1000 ease-in`}
-          >
-            <img src={mainImg} alt="img" className="h-72" />
-          </div>
+          <HeroImage cssStyle={"w-[30rem]"} />
         </section>
+
         <Skills />
         <About />
         <Projects />
