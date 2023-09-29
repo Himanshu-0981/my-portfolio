@@ -14,6 +14,7 @@ export const DashBoard = () => {
     tags: new String(""),
     description: new String(""),
   });
+  const [file, setFile] = useState(null);
   const handleToggle = () => setToggle(!toggle);
   const URL = "http://localhost:5000/projects";
 
@@ -43,8 +44,20 @@ export const DashBoard = () => {
     fetchData();
   }, []);
 
+  function onChange(event) {
+    setFile(event.target.files);
+  }
+
   const handleSubmit = (event) => event.preventDefault();
-  const handleAdd = () => sendDataToBackend();
+  const handleAdd = () => {
+    const data = new FormData();
+    for (var x = 0; x < file.length; x++) {
+      data.append("file", file[x]);
+    }
+    axios.post("http://localhost:5000/upload", data).then((res) => {
+      console.log(res.statusText);
+    });
+  };
 
   return (
     <>
@@ -110,7 +123,7 @@ export const DashBoard = () => {
           ></textarea>
         </div>
         <div className="text-sm">
-          <input type="file" name="" id="" />
+          <input type="file" name="" id="" onChange={onChange} />
         </div>
         <Button
           title={"Add"}
