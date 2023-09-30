@@ -11,7 +11,7 @@ const Button = ({
   return (
     <>
       <button
-        className={`text-white ${bg} ${width} ${flex} ${`hover:${hover}`} pt-1 pb-1 pr-5 pl-5  rounded-full font-normal text-base  ${others}  `}
+        className={`text-white ${bg} ${width} ${flex} ${`hover:${hover}`} pt-2 pb-2 pr-5 pl-5  rounded-[4px] font-normal text-base  ${others}  `}
         onClick={handleClick}
       >
         <section>{title}</section>
