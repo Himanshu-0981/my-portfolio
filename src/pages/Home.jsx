@@ -16,9 +16,9 @@ const Home = () => {
 
   return (
     <>
-      <main className="mt-10 sm:mt-16">
+      <main className="mt-10 sm:mt-20">
         <section className=" relative flex justify-center items-center z-10 pb-60  flex-col-reverse sm:flex-row">
-          <div className="font-semibold text-4xl  sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl  text-[#142a36] text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
+          <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl  text-[#142a36] text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
             <h1 className="mt-1">Hi, </h1>
             <div className="mt-2">
               I am <span className="text-blue-600">Himanshu</span>
@@ -44,7 +44,9 @@ const Home = () => {
 
           <div>
             <HeroImage
-              cssStyle={"w-[30rem] sm:w-[20rem] lg:w-[30rem] 2xl:w-[40rem]"}
+              cssStyle={
+                "w-[10rem] w-370:w-[15rem] w-440:w-[25rem] sm:w-[20rem] lg:w-[30rem] 2xl:w-[40rem]"
+              }
             />
           </div>
         </section>
