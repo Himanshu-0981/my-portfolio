@@ -23,14 +23,14 @@ import postmanIcon from "../assets/icons8-postman.svg";
 const Skills = () => {
   return (
     <>
-      <main className="bg-[#2563eb] p-3 sm:p-5 w-450:p-20 md:p-20">
-        <section className="bg-white rounded-lg pb-10 pt-5">
+      <main className=" bg-[#2563eb] p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center">
+        <section className="bg-white rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-15 sm:pl-15 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
           <TopHeading title="Tech Stack" />
           <TopHeading
             title="Technology that i've been worked on"
             styleClass={"no-underline text-[10px] sm:text-base font-normal"}
           />
-          <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5">
+          <section className="flex justify-center space-x-[2px] w-440:space-x-2 sm:space-x-3 md:space-x-5">
             <TechStack title={"Html"} icon={htmlIcon} />
             <TechStack title={"Css"} icon={cssIcon} />
             <TechStack title={"Tailwind"} icon={tailwindIcon} />

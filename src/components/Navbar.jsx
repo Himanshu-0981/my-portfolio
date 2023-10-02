@@ -60,7 +60,7 @@ function Navbar() {
           Portfolio.io
         </div>
         <div
-          style={{ zIndex: 10 }}
+          style={{ zIndex: 20 }}
           className={`absolute top-0 right-0 text-center ${
             !toggle
               ? " -translate-y-48 transition-transform"

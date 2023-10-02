@@ -4,6 +4,19 @@
   font-family: "poppins";
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2563eb;
+  border-radius: 10px;
+}
+
 .custom-scrollbar {
   overflow: auto;
   scrollbar-width: thin; /* For Firefox */

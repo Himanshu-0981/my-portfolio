@@ -6,7 +6,7 @@ function HeroImage({ cssStyle }) {
     <>
       <div className="wrapper">
         <div className={`item ${cssStyle}`}>
-          <img src={mainImg} alt="main img" />
+          <img src={mainImg} alt="main img" loading="lazy" />
         </div>
       </div>
     </>
