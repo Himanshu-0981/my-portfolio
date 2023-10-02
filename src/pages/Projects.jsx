@@ -1,61 +1,156 @@
-import React from "react";
-import { BsYoutube } from "react-icons/bs";
-import { FcGoogle, FcNews } from "react-icons/fc";
-import { MdMovie } from "react-icons/md";
+import { FaEye, FaCode } from "react-icons/fa";
 
-import ProjectCards from "../components/ProjectCard";
 import TopHeading from "../components/TopHeading";
-import projectGoogle from "../assets/google.png";
-import projectYoutube from "../assets/youtube.png";
-import projectNewsVerse from "../assets/newsverse.png";
-import projectMovie from "../assets/movie.png";
+import ProjectCards from "../components/ProjectCard";
+import Button from "../components/Button";
 
-const Projects = () => {
+function Projects() {
   return (
-    <>
-      <main className="bg-blue-600 p-1 xs:p-3 sm:p-5 w-450:p-16 md:p-16">
-        <main className=" flex justify-center bg-white rounded-lg relative mt-10">
-          <section className="absolute mb-5">
-            <TopHeading title="PROJECTS" styleClass={"pt-5"} />
-          </section>
-          <div className="flex justify-center flex-wrap lg:flex-co rounded-lg mt-20 pt-10">
-            <ProjectCards
-              title={"Youtube Clone"}
-              icon={<BsYoutube color="red" />}
-              poster={projectYoutube}
-              paragraph={
-                "Designed and developed a YouTube clone using React.js, mimicking the core functionalities of the popular video-sharing platform. Implemented features such as video playback, search, and recommendations. Demonstrated proficiency in React.js and showcased ability to create dynamic and interactive web applications."
-              }
-            />
-            <ProjectCards
-              title={"Google Search Engine"}
-              icon={<FcGoogle />}
-              poster={projectGoogle}
-              paragraph={
-                "Developed a Google search engine clone using React.js, replicating core functionalities such as search suggestions, responsive design, and real-time search updates. Demonstrated proficiency in React.js and problem-solving skills in web development, showcasing creativity, adaptability, meticulousness, and strong coding abilities."
-              }
-            />
-            <ProjectCards
-              title={"Newsverse"}
-              icon={<FcNews />}
-              poster={projectNewsVerse}
-              paragraph={
-                "Created Newsverse, a news app built using React.js. Implemented features like real-time news updates, personalized news categories, and saved articles. Demonstrated expertise in React.js, API integration, and responsive design. Showcased ability to develop user-friendly and informative web applications for seamless news browsing."
-              }
-            />
-            <ProjectCards
-              title={"Movie App"}
-              icon={<MdMovie color="orange" />}
-              poster={projectMovie}
-              paragraph={
-                "Developed a movie search app using React.js, enabling users to search for movies, view details, and manage favorites. Utilized React's components and state management to create a user-friendly and responsive interface. Demonstrated proficiency in React.js and ability to develop functional and interactive web applications."
-              }
-            />
-          </div>
-        </main>
-      </main>
-    </>
+    <div className="bg-[#0e1630]">
+      <TopHeading title="CHECKOUT MY PROJECTS" />
+
+      <div className="flex justify-center flex-wrap gap-4 mt-10 pb-20">
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Full Stack Twitter Clone"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Ftwitter-clone.jpg&w=384&q=75"
+            description="Build Full Stack Twitter clone using latest tech stack"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Java mastery course"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fjava-master.webp&w=384&q=75"
+            description="Full java course beigner to mastery in just two months"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Java DSA course"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75"
+            description="Complete Java DSA with practice set just for rs 1000/month link in description"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Full Stack Twitter Clone"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Ftwitter-clone.jpg&w=384&q=75"
+            description="Build Full Stack Twitter clone using latest tech stack"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Java mastery course"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fjava-master.webp&w=384&q=75"
+            description="Full java course beigner to mastery in just two months"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+        <section className="hover:scale-105 duration-300">
+          <ProjectCards
+            title="Java DSA course"
+            src="https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75"
+            description="Complete Java DSA with practice set just for rs 1000/month link in description"
+            visit={
+              <Button
+                title="Preview"
+                bg="bg-[#808dad68] text-white mr-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaEye />}
+              />
+            }
+            github={
+              <Button
+                title="Github"
+                bg="bg-[#808dad68] text-white ml-1 "
+                others="hover:bg-white hover:text-black mt-10"
+                icon={<FaCode />}
+              />
+            }
+          />
+        </section>
+      </div>
+    </div>
   );
-};
+}
 
 export default Projects;
