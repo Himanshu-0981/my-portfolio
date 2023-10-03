@@ -25,7 +25,7 @@ const Skills = () => {
   return (
     <>
       <main className=" p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center">
-        <section className=" bg-color_blue_transparent rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-15 sm:pl-15 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
+        <section className=" bg-color_blue_transparent rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-32 sm:pl-32 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
           <TopHeading title="Tech Stack" />
           <TopHeading
             title="Technology that i've been worked on"
