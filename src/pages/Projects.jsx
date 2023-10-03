@@ -7,7 +7,11 @@ import Button from "../components/Button";
 function Projects() {
   return (
     <div className="bg-[#0e1630]">
-      <TopHeading title="CHECKOUT MY PROJECTS" />
+      <TopHeading
+        title="CHECKOUT MY PROJECTS"
+        textColor="text-white"
+        styleClass="pt-5"
+      />
 
       <div className="flex justify-center flex-wrap gap-4 mt-10 pb-20">
         <section className="hover:scale-105 duration-300">
