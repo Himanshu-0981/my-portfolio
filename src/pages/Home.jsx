@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { BsArrowRightShort } from "react-icons/bs";
 
 import Button from "../components/Button";
 import Skills from "../components/Skills";
@@ -9,10 +8,11 @@ import Projects from "./Projects";
 import Contact from "../pages/Contact";
 import HeroImage from "../components/HeroImage";
 import Icons from "../components/Icons";
+import downArrow from "../assets/downarrow.svg";
 
 const Home = () => {
   const navigate = useNavigate();
-  const gotoPage = () => navigate("/contact");
+  // const gotoPage = () => navigate();
 
   const arrOfGreetings = [
     "नमस्ते",
@@ -58,12 +58,14 @@ const Home = () => {
               <div className="mt-5 mb-5 md:mt-10 md:mb-10">
                 <Button
                   title="CONTACT"
-                  icon={<BsArrowRightShort />}
+                  svg={downArrow}
                   flex={"flex items-center justify-between"}
                   bg="bg-color_green"
                   size={"font-extrabold"}
-                  others={"hover:scale-110 duration-200 text-color_dark_blue"}
-                  handleClick={gotoPage}
+                  others={
+                    "hover:scale-110 duration-200 text-color_dark_blue w-full"
+                  }
+                  navigate={"#contact"}
                 />
               </div>
               <div>

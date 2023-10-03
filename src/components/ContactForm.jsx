@@ -55,7 +55,7 @@ const ContactForm = () => {
             title="SUBMIT"
             bg="bg-color_green"
             size={"font-bold"}
-            others={"text-color_dark_blue hover:scale-110 duration-200 "}
+            others={"text-color_dark_blue hover:scale-110 duration-200 mt-5"}
           />
         </form>
       </div>

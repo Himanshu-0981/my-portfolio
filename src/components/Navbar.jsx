@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { NavHashLink as Link } from "react-router-hash-link";
 import {
   AiOutlineMenu,
   AiFillCloseSquare,
   AiOutlineCode,
 } from "react-icons/ai";
-
-import { HashLink as Link } from "react-router-hash-link";
 
 function Navbar() {
   const navLinkStyles = ({ isActive }) => {
