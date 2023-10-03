@@ -14,7 +14,14 @@ const Home = () => {
   const navigate = useNavigate();
   const gotoPage = () => navigate("/contact");
 
-  const arrOfGreetings = ["नमस्ते", "Hola", "Bonjour", "Hello"];
+  const arrOfGreetings = [
+    "नमस्ते",
+    "Bonjour",
+    "Hola",
+    "வணக்கம்",
+    "Hello",
+    "অভিবাদন",
+  ];
 
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
   const [displayedGreeting, setDisplayedGreeting] = useState("");
@@ -27,7 +34,7 @@ const Home = () => {
       } else {
         setCurrentGreetingIndex(0);
       }
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearInterval(interval);
