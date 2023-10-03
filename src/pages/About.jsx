@@ -1,10 +1,10 @@
-import mainImg from "../assets/main_img.png";
 import TopHeading from "../components/TopHeading";
 import AboutMeText from "../components/AboutMeText";
 import HeroImage from "../components/HeroImage";
+
 const About = () => {
   return (
-    <>
+    <div id="about">
       <TopHeading title="ABOUT ME" styleClass={"pt-5 pb-5"} />
       <div className="flex justify-center items-center mb-24 mt-5">
         <HeroImage cssStyle={"w-[22rem] hidden md:flex"} />
@@ -12,7 +12,7 @@ const About = () => {
           <AboutMeText />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

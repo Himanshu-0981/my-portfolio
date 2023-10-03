@@ -6,7 +6,7 @@ import Button from "../components/Button";
 
 function Projects() {
   return (
-    <div>
+    <div id="projects">
       <TopHeading title="MY PROJECTS" styleClass="pt-5" />
 
       <div className="flex justify-center items-center flex-wrap  mt-10">

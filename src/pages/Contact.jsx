@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 import TopHeading from "../components/TopHeading";
 const Contact = () => {
   return (
-    <>
+    <div id="contact">
       <TopHeading title="CONTACT" styleClass={"pt-5 pb-5"} />
       <div className="flex justify-center pb-10">
         <div className="sm:flex justify-around">
@@ -22,7 +22,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
