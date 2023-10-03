@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { AiOutlineMenu, AiFillCloseCircle } from "react-icons/ai";
+import {
+  AiOutlineMenu,
+  AiFillCloseSquare,
+  AiOutlineCode,
+} from "react-icons/ai";
 
 import "../../styles/Navbar.css";
 
 function Navbar() {
   const navLinkStyles = ({ isActive }) => {
     return {
-      color: isActive ? "rgb(37 99 235)" : "",
+      color: isActive ? "#01d28a" : "#c9d1d9",
       textDecoration: isActive ? "underline" : "none",
       textUnderlineOffset: isActive ? "8px" : "none",
       textDecorationThickness: isActive ? "2px" : "none",
@@ -48,16 +52,22 @@ function Navbar() {
   return (
     <main
       className={`pt-3 pb-3  ${
-        isSticky ? "sticky top-0 bg-white shadow-md" : "shadow-md"
+        isSticky
+          ? "sticky top-0  bg-color_dark_blue shadow-md"
+          : "shadow-md  bg-color_dark_blue"
       }`}
       style={{ zIndex: 100 }}
     >
-      <nav className="text-center flex justify-around items-center  sm:flex sm:justify-around p-1 ">
+      <nav className="text-center flex justify-between pr-4 pl-4 md:pr-0 md:pl-0  items-center  sm:flex xs:justify-around p-1 text-sm ">
         <div
-          className="font-medium text-[#142a36] cursor-pointer"
+          className="font-medium text-color_gray text-base md:text-xl cursor-pointer flex items-center"
           onClick={goToHome}
         >
-          Portfolio.io
+          <span className="text-color_green">H</span>
+          <span>imanshu</span>
+          <span className="ml-2">
+            <AiOutlineCode size={25} />
+          </span>
         </div>
         <div
           style={{ zIndex: 20 }}
@@ -67,7 +77,7 @@ function Navbar() {
               : "translate-y-0 transition-transform"
           }  w-full sm:w-48 sm:relative sm:inline-block sm:-translate-y-0 }`}
         >
-          <ul className=" text-white flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-[#142a36] sm:text-[#142a36] sm:bg-white space-y-3 sm:space-y-0">
+          <ul className=" text-white flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-color_dark_blue  sm:bg-white space-y-3 sm:space-y-0">
             <NavLink style={navLinkStyles} to="/" onClick={handleMenuClick}>
               Home
             </NavLink>
@@ -96,9 +106,9 @@ function Navbar() {
         </div>
         <section className="flex sm:hidden z-20 " onClick={handleToggle}>
           {!toggle ? (
-            <AiOutlineMenu className="text-[#142a36]" />
+            <AiOutlineMenu className="text-color_green" size={18} />
           ) : (
-            <AiFillCloseCircle className="text-white" />
+            <AiFillCloseSquare className="text-color_green" size={18} />
           )}
         </section>
       </nav>
