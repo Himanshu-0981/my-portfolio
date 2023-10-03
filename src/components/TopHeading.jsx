@@ -6,8 +6,8 @@ const TopHeading = (props) => {
     <>
       <h1
         className={`${
-          textColor ? textColor : "text-[#142a36]"
-        } text-center mt-5 font-semibold text-2xl underline underline-offset-8 decoration-blue-600 ${styleClass} `}
+          textColor ? textColor : "text-color_white"
+        } text-center mt-5 font-semibold text-4xl underline underline-offset-[12px] decoration-color_green ${styleClass} `}
       >
         {title}
       </h1>

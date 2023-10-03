@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
-import "../../styles/Home.css";
 import Button from "../components/Button";
 import Skills from "../components/Skills";
 import About from "../pages/About";
@@ -16,23 +15,24 @@ const Home = () => {
 
   return (
     <>
-      <main className="mt-10 sm:mt-20">
-        <section className=" relative flex justify-center items-center z-10 pb-60  flex-col-reverse sm:flex-row">
-          <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl  text-[#142a36] text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
-            <h1 className="mt-1">Hi, </h1>
+      <main className="pt-10 sm:pt-20 bg-color_dark_blue">
+        <section className=" relative flex justify-center items-center z-10  flex-col-reverse sm:flex-row">
+          <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-color_white text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
+            <h1 className="mt-1 text-5xl font-semibold">Hello , </h1>
             <div className="mt-2">
-              I am <span className="text-blue-600">Himanshu</span>
+              I am{" "}
+              <span className="text-blue-600 text-color_green ">Himanshu</span>
             </div>
             <div className="mt-3 ">Full stack Developer.</div>
-            <section className="items-center gap-3 block sm:flex">
-              <div className="mt-3 mb-3">
+            <section className="items-center gap-3 block sm:flex ">
+              <div className="mt-5 mb-5 md:mt-10 md:mb-10">
                 <Button
-                  title="contact"
+                  title="CONTACT"
                   icon={<BsArrowRightShort />}
                   flex={"flex items-center justify-between"}
-                  bg="bg-blue-600"
-                  hover={"justify-center"}
-                  others={"w-full"}
+                  bg="bg-color_green"
+                  size={"font-extrabold"}
+                  others={"hover:scale-110 duration-200 text-color_dark_blue"}
                   handleClick={gotoPage}
                 />
               </div>

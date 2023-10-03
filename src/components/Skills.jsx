@@ -6,11 +6,12 @@ import cssIcon from "../assets/icons8-css.svg";
 import tailwindIcon from "../assets/icons8-tailwind-css.svg";
 import jsIcon from "../assets/icons8-javascript.svg";
 import reactIcon from "../assets/icons8-react-native.svg";
-import nextJSIcon from "../assets/next-js.svg";
+// import nextJSIcon from "../assets/next-js.svg";
+import nextJsIcon from "../assets/nextjs.png";
 import reduxIcon from "../assets/icons8-redux.svg";
 
-import nodeJsIcon from "../assets/icons8-nodejs.svg";
-import expressIcon from "../assets/icons8-express-js.svg";
+import nodeJsIcon from "../assets/nodejs.png";
+import expressIcon from "../assets/express.png";
 import mongoDBIcon from "../assets/mongodb-icon.svg";
 import mongooseIcon from "../assets/icons8-mongoose.svg";
 import firebaseIcon from "../assets/icons8-firebase.svg";
@@ -23,8 +24,8 @@ import postmanIcon from "../assets/icons8-postman.svg";
 const Skills = () => {
   return (
     <>
-      <main className=" bg-[#2563eb] p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center">
-        <section className="bg-white rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-15 sm:pl-15 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
+      <main className=" p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center mt-20">
+        <section className=" bg-color_blue_transparent rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-32 sm:pl-32 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
           <TopHeading title="Tech Stack" />
           <TopHeading
             title="Technology that i've been worked on"
@@ -36,7 +37,7 @@ const Skills = () => {
             <TechStack title={"Tailwind"} icon={tailwindIcon} />
             <TechStack title={"Javascript"} icon={jsIcon} />
             <TechStack title={"ReactJS"} icon={reactIcon} />
-            <TechStack title={"NextJS"} icon={nextJSIcon} />
+            <TechStack title={"NextJS"} icon={nextJsIcon} />
             {/* <TechStack title={"Redux"} icon={reduxIcon} /> */}
           </section>
           <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 ">

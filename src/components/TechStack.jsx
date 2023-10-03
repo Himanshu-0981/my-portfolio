@@ -6,9 +6,9 @@ const TechStack = ({ title, icon }) => {
           <img
             src={icon}
             alt="JavaScript Icon"
-            className=" transition-all w-8 h-8 p-1 xs:w-12 xs:h-12 xs:p-2 sm:w-12 sm:h-12 sm:p-2 md:w-14 md:h-14 md:m-2 md:p-3 bg-[#e0e0e0] rounded-lg hover:border-4 hover:border-blue-500"
+            className=" transition-all w-8 h-8 p-1 xs:w-12 xs:h-12 xs:p-2 sm:w-12 sm:h-12 sm:p-2 md:w-14 md:h-14 md:m-2 md:p-3 bg-color_dark_blue rounded-2xl hover:border-4 hover:border-color_green"
           />
-          <p className="text-[#142a36]">{title}</p>
+          <p className="text-color_white">{title}</p>
         </section>
       </section>
     </main>
