@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <main className="pt-10 sm:pt-20 bg-color_dark_blue">
-        <section className=" relative flex justify-center items-center z-10 pb-60  flex-col-reverse sm:flex-row">
+        <section className=" relative flex justify-center items-center z-10  flex-col-reverse sm:flex-row">
           <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-color_white text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
             <h1 className="mt-1 text-5xl font-semibold">Hello , </h1>
             <div className="mt-2">

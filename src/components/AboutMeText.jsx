@@ -1,16 +1,18 @@
 function AboutMeText() {
   return (
     <>
-      <p className="text-[#142a36] text-sm">
-        <span className="text-2xl font-semibold"> Hey👋</span> I'm{" "}
-        <span className="font-semibold text-red-500"> Himanshu Tiwari</span>, a{" "}
-        <span className="font-semibold text-red-500">BCA graduate</span> seeking
-        a web development career. As a{" "}
-        <span className="font-semibold text-red-500">full stack developer</span>
+      <p className="text-color_gray text-base">
+        <span className="text-4xl font-semibold"> Hey,</span> I'm{" "}
+        <span className="font-semibold text-color_green"> Himanshu Tiwari</span>
+        , a <span className="font-semibold text-color_green">BCA graduate</span>{" "}
+        seeking a web development career. As a{" "}
+        <span className="font-semibold text-color_green">
+          full stack developer
+        </span>
         , I have successfully completed numerous exciting projects, showcasing
         my skills in creating responsive interfaces and dynamic components. With
         a focus on user experience, I have proficiency in{" "}
-        <span className="font-semibold text-red-500">
+        <span className="font-semibold text-color_green">
           {" "}
           HTML, CSS, JavaScript, React, Next.js, Node.js, MongoDB, and Mongoose
         </span>
@@ -20,7 +22,7 @@ function AboutMeText() {
         skills, makes me a valuable addition to any web development team. I am
         eager to contribute my expertise and collaborate with professionals to
         create innovative web solutions. Please take a moment to{" "}
-        <span className="font-semibold text-red-500 ">
+        <span className="font-semibold text-color_green ">
           explore my portfolio and see the projects
         </span>{" "}
         I've worked on.
