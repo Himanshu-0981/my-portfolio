@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
@@ -13,12 +14,34 @@ const Home = () => {
   const navigate = useNavigate();
   const gotoPage = () => navigate("/contact");
 
+  const arrOfGreetings = ["नमस्ते", "Hola", "Bonjour", "Hello"];
+
+  const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
+  const [displayedGreeting, setDisplayedGreeting] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentGreetingIndex < arrOfGreetings.length) {
+        setDisplayedGreeting(arrOfGreetings[currentGreetingIndex]);
+        setCurrentGreetingIndex(currentGreetingIndex + 1);
+      } else {
+        setCurrentGreetingIndex(0);
+      }
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentGreetingIndex, arrOfGreetings]);
+
   return (
     <>
       <main className="pt-10 sm:pt-20 bg-color_dark_blue">
         <section className=" relative flex justify-center items-center z-10  flex-col-reverse sm:flex-row">
           <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-color_white text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
-            <h1 className="mt-1 text-5xl font-semibold">Hello , </h1>
+            <h1 className="mt-1 text-5xl font-semibold">
+              {displayedGreeting ? displayedGreeting : "Hello"} ,{" "}
+            </h1>
             <div className="mt-2">
               I am{" "}
               <span className="text-blue-600 text-color_green ">Himanshu</span>
