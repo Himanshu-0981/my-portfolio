@@ -51,10 +51,8 @@ function Navbar() {
 
   return (
     <main
-      className={`pt-3 pb-3  ${
-        isSticky
-          ? "sticky top-0  bg-color_dark_blue shadow-md"
-          : "shadow-md  bg-color_dark_blue"
+      className={`pt-3 pb-3 ${
+        isSticky ? "sticky top-0  bg-color_dark_blue " : " bg-color_dark_blue"
       }`}
       style={{ zIndex: 100 }}
     >

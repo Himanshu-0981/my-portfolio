@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 function Icons() {
   const navigate = useNavigate();
   return (
-    <div className="border-white border-2 md:w-fit flex justify-center gap-1 items-center mt-3 mb-3">
-      <div className="bg-black p-2 rounded-[4px]">
+    <div className=" md:w-fit flex justify-center gap-0 items-center mt-3 mb-3">
+      <div className="bg-white p-2 rounded-[4px] cursor-pointer">
         <BsGithub
           size={25}
           color="white"
@@ -16,7 +16,7 @@ function Icons() {
           }
         />
       </div>
-      <div className="bg-blue-600 p-2 rounded-[4px]">
+      <div className="bg-white p-2 rounded-[4px] cursor-pointer">
         <BsLinkedin
           size={25}
           color="white"
@@ -25,7 +25,7 @@ function Icons() {
           }
         />
       </div>
-      <div className="bg-gray-900 p-2 rounded-[4px]">
+      <div className="bg-white p-2 rounded-[4px] cursor-pointer">
         <RiTwitterXFill
           size={25}
           color="white"

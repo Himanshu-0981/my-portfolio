@@ -1,5 +1,3 @@
-import "../../styles/CustomShadow.css";
-
 const ProjectCards = ({ src, title, icon, description, visit, github }) => {
   return (
     <>
