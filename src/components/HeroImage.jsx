@@ -1,4 +1,4 @@
-import "../../styles/HeroImageBlob.css";
+import "../styles/HeroImageBlob.css";
 import mainImg from "../assets/main_img.png";
 
 function HeroImage({ cssStyle }) {

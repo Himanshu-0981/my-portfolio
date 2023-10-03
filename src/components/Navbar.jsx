@@ -6,8 +6,6 @@ import {
   AiOutlineCode,
 } from "react-icons/ai";
 
-import "../../styles/Navbar.css";
-
 function Navbar() {
   const navLinkStyles = ({ isActive }) => {
     return {

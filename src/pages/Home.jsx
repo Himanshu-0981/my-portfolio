@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
-import "../../styles/Home.css";
 import Button from "../components/Button";
 import Skills from "../components/Skills";
 import About from "../pages/About";
@@ -28,11 +27,12 @@ const Home = () => {
             <section className="items-center gap-3 block sm:flex ">
               <div className="mt-5 mb-5 md:mt-10 md:mb-10">
                 <Button
-                  title="contact"
+                  title="CONTACT"
                   icon={<BsArrowRightShort />}
                   flex={"flex items-center justify-between"}
-                  bg="bg-color_blue_transparent"
-                  others={"w-full hover:scale-110 duration-200 border-2"}
+                  bg="bg-color_green"
+                  size={"font-extrabold"}
+                  others={"hover:scale-110 duration-200 text-color_dark_blue"}
                   handleClick={gotoPage}
                 />
               </div>
