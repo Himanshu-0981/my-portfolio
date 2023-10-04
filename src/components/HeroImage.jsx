@@ -1,14 +1,23 @@
+import { useRef } from "react";
+import { motion } from "framer-motion";
+
 import "../styles/HeroImageBlob.css";
 import mainImg from "../assets/main_img.png";
 
 function HeroImage({ cssStyle }) {
+  const constraintsRef = useRef(null);
   return (
     <>
-      <div className="wrapper">
+      <motion.div className="wrapper" ref={constraintsRef}>
         <div className={`item ${cssStyle}`}>
-          <img src={mainImg} alt="main img" />
+          <motion.img
+            src={mainImg}
+            alt="main img"
+            drag
+            dragConstraints={constraintsRef}
+          />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

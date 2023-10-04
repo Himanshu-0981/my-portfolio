@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import TopHeading from "./TopHeading";
 import TechStack from "./TechStack";
 
@@ -6,7 +8,6 @@ import cssIcon from "../assets/icons8-css.svg";
 import tailwindIcon from "../assets/icons8-tailwind-css.svg";
 import jsIcon from "../assets/icons8-javascript.svg";
 import reactIcon from "../assets/icons8-react-native.svg";
-// import nextJSIcon from "../assets/next-js.svg";
 import nextJsIcon from "../assets/nextjs.png";
 import reduxIcon from "../assets/icons8-redux.svg";
 
@@ -22,6 +23,20 @@ import githubIcon from "../assets/icons8-github.svg";
 import postmanIcon from "../assets/icons8-postman.svg";
 
 const Skills = () => {
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: -100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3,
+      },
+    },
+  };
+
   return (
     <>
       <main className=" p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center mt-20">
@@ -31,7 +46,13 @@ const Skills = () => {
             title="Technology that i've been worked on"
             styleClass={"no-underline text-[10px] sm:text-base font-normal"}
           />
-          <section className="flex justify-center space-x-[2px] w-440:space-x-2 sm:space-x-3 md:space-x-5">
+          <motion.section
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="flex justify-center space-x-[2px] w-440:space-x-2 sm:space-x-3 md:space-x-5"
+          >
             <TechStack title={"Html"} icon={htmlIcon} />
             <TechStack title={"Css"} icon={cssIcon} />
             <TechStack title={"Tailwind"} icon={tailwindIcon} />
@@ -39,20 +60,34 @@ const Skills = () => {
             <TechStack title={"ReactJS"} icon={reactIcon} />
             <TechStack title={"NextJS"} icon={nextJsIcon} />
             {/* <TechStack title={"Redux"} icon={reduxIcon} /> */}
-          </section>
-          <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 ">
+          </motion.section>
+
+          <motion.section
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5 "
+          >
             <TechStack title={"NodeJS "} icon={nodeJsIcon} />
             <TechStack title={"ExpressJS "} icon={expressIcon} />
             <TechStack title={"MongoDB"} icon={mongoDBIcon} />
             <TechStack title={"Mongoose"} icon={mongooseIcon} />
             <TechStack title={"Firebase"} icon={firebaseIcon} />
-          </section>
-          <section className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5">
+          </motion.section>
+
+          <motion.section
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="flex justify-center space-x-1 w-440:space-x-2 sm:space-x-3 md:space-x-5"
+          >
             <TechStack title={"Vs Code"} icon={vsCodeIcon} />
             <TechStack title={"Git"} icon={gitIcon} />
             <TechStack title={"Github"} icon={githubIcon} />
             <TechStack title={"Postman"} icon={postmanIcon} />
-          </section>
+          </motion.section>
         </section>
       </main>
     </>

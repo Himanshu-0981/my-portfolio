@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Button from "../components/Button";
 import Skills from "../components/Skills";
@@ -11,9 +10,6 @@ import Icons from "../components/Icons";
 import downArrow from "../assets/downarrow.svg";
 
 const Home = () => {
-  const navigate = useNavigate();
-  // const gotoPage = () => navigate();
-
   const arrOfGreetings = [
     "नमस्ते",
     "Bonjour",
