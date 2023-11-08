@@ -6,17 +6,10 @@ import {
   AiFillCloseSquare,
   AiOutlineCode,
 } from "react-icons/ai";
+import { useTheme } from "../contexts/ThemeContext";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 function Navbar() {
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      color: isActive ? "#01d28a" : "#c9d1d9",
-      textDecoration: isActive ? "underline" : "none",
-      textUnderlineOffset: isActive ? "8px" : "none",
-      textDecorationThickness: isActive ? "2px" : "none",
-    };
-  };
-
   const [toggle, setToggle] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -25,6 +18,7 @@ function Navbar() {
 
   const handleToggle = () => setToggle(!toggle);
   const handleMenuClick = () => setToggle(false);
+  const [themeState, setThemeState] = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,8 +44,8 @@ function Navbar() {
 
   return (
     <main
-      className={`pt-3 pb-3 ${
-        isSticky ? "sticky top-0  bg-color_dark_blue " : " bg-color_dark_blue"
+      className={`pt-3 pb-3 ${isSticky ? "sticky top-0 " : " "} ${
+        themeState ? "bg-dark-background" : "bg-color_white"
       }`}
       style={{ zIndex: 100 }}
     >
@@ -61,7 +55,7 @@ function Navbar() {
           onClick={goToHome}
         >
           <span className="text-color_green">H</span>
-          <span>imanshu</span>
+          <span>imanshu </span>
           <span className="ml-2">
             <AiOutlineCode size={25} />
           </span>
@@ -74,7 +68,11 @@ function Navbar() {
               : "translate-y-0 transition-transform"
           }  w-full sm:w-48 sm:relative sm:inline-block sm:-translate-y-0 }`}
         >
-          <ul className=" text-color_gray flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 bg-color_dark_blue  sm:bg-white space-y-3 sm:space-y-0">
+          <ul
+            className={`text-color_gray flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 ${
+              themeState ? "bg-dark-background" : "bg-light-background"
+            }  sm:bg-white space-y-3 sm:space-y-0`}
+          >
             <Link
               to="#"
               smooth
@@ -107,6 +105,23 @@ function Navbar() {
             >
               Contact
             </Link>
+            <div className="flex items-center justify-center">
+              <label className="relative inline-flex items-center mr-1 cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="sr-only peer"
+                  onChange={(e) => setThemeState(e.target.checked)}
+                />
+                <div className="w-11 h-6 bg-color_gray rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-color_white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-color_green" />
+              </label>
+              <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                {themeState ? (
+                  <BsFillMoonFill size={19} className="text-color_white" />
+                ) : (
+                  <BsFillSunFill size={19} className="text-dark-background" />
+                )}
+              </span>
+            </div>
           </ul>
         </div>
         <section className="flex sm:hidden z-20 " onClick={handleToggle}>

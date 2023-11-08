@@ -19,7 +19,17 @@ module.exports = {
       color_dark_blue: "#0e1630",
       color_blue_transparent: "#171f38",
       color_gray: "#979ea6",
+
+      light: {
+        background: "#fff",
+        text_color: "#000",
+      },
+      dark: {
+        background: "#0e1630",
+        text_color: "#fff",
+      },
     },
+
     extend: {},
   },
   plugins: [],
