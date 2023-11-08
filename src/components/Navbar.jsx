@@ -68,14 +68,14 @@ function Navbar() {
             !toggle
               ? " -translate-y-48 transition-transform"
               : "translate-y-0 transition-transform"
-          }  w-full sm:w-48 sm:relative sm:inline-block sm:-translate-y-0 }`}
+          }  w-full md:w-48 md:relative md:inline-block md:-translate-y-0 }`}
         >
           <ul
-            className={`text-color_gray flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 ${
+            className={`text-color_gray flex flex-col md:flex-row pb-2.5 pt-2.5 font-medium  md:pb-0 md:pt-0 md:space-x-6 ${
               themeState
                 ? "bg-dark-background duration-300 "
                 : "bg-light-background text-color_dark_blue duration-300"
-            }  sm:bg-white space-y-3 sm:space-y-0`}
+            }  md:bg-white space-y-3 md:space-y-0`}
           >
             <Link
               to="#"
@@ -113,10 +113,11 @@ function Navbar() {
               <label className="relative inline-flex items-center mr-1 cursor-pointer">
                 <input
                   type="checkbox"
+                  checked={themeState}
                   className="sr-only peer"
                   onChange={(e) => setThemeState(e.target.checked)}
                 />
-                <div className="w-11 h-6 bg-color_gray rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-color_white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-color_green" />
+                <div className="w-11 h-6 bg-color_gray rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-color_white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-color_green" />
               </label>
               <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 {themeState ? (
@@ -128,11 +129,25 @@ function Navbar() {
             </div>
           </ul>
         </div>
-        <section className="flex sm:hidden z-20 " onClick={handleToggle}>
+        <section className="flex md:hidden z-20 " onClick={handleToggle}>
           {!toggle ? (
-            <AiOutlineMenu className="text-color_green" size={18} />
+            <AiOutlineMenu
+              className={`${
+                themeState
+                  ? " text-color_green duration-300"
+                  : "text-color_dark_blue duration-300"
+              }`}
+              size={18}
+            />
           ) : (
-            <AiFillCloseSquare className="text-color_green" size={18} />
+            <AiFillCloseSquare
+              className={`${
+                themeState
+                  ? " text-color_green duration-300"
+                  : "text-color_dark_blue duration-300"
+              }`}
+              size={18}
+            />
           )}
         </section>
       </nav>

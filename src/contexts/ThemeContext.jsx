@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-  const [themeState, setThemeState] = useState(false);
+  const [themeState, setThemeState] = useState(true);
 
   return (
     <ThemeContext.Provider value={[themeState, setThemeState]}>
