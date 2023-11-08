@@ -6,7 +6,9 @@ function AboutMeText() {
     <>
       <p
         className={`${
-          themeState ? "text-color-gray" : "text-color_black"
+          themeState
+            ? "text-color-gray duration-300"
+            : "text-color_black duration-300"
         } text-base`}
       >
         <span className="text-4xl font-semibold"> Hey,</span> I'm{" "}
