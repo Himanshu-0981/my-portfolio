@@ -1,7 +1,14 @@
+import { useTheme } from "../contexts/ThemeContext";
+
 function AboutMeText() {
+  const [themeState] = useTheme();
   return (
     <>
-      <p className="text-color_gray text-base">
+      <p
+        className={`${
+          themeState ? "text-color-gray" : "text-color_black"
+        } text-base`}
+      >
         <span className="text-4xl font-semibold"> Hey,</span> I'm{" "}
         <span className="font-semibold text-color_green"> Himanshu Tiwari</span>
         , a <span className="font-semibold text-color_green">BCA graduate</span>{" "}
