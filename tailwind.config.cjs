@@ -15,6 +15,7 @@ module.exports = {
     colors: {
       color_black: "#000",
       color_white: "#fff",
+      color_white_transparent: "#e1e2e6",
       color_green: "#01d28a",
       color_dark_blue: "#0e1630",
       color_blue_transparent: "#171f38",
@@ -26,6 +27,7 @@ module.exports = {
       },
       dark: {
         background: "#0e1630",
+        transparent: "#171f38",
         text_color: "#fff",
       },
     },

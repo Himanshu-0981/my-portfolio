@@ -15,12 +15,14 @@ import nodeJsIcon from "../assets/nodejs.png";
 import expressIcon from "../assets/express.png";
 import mongoDBIcon from "../assets/mongodb-icon.svg";
 import mongooseIcon from "../assets/icons8-mongoose.svg";
-import firebaseIcon from "../assets/icons8-firebase.svg";
+// import firebaseIcon from "../assets/icons8-firebase.svg";
 
 import vsCodeIcon from "../assets/icons8-vs-code.svg";
 import gitIcon from "../assets/icons8-git.svg";
 import githubIcon from "../assets/icons8-github.svg";
 import postmanIcon from "../assets/icons8-postman.svg";
+
+import { useTheme } from "../contexts/ThemeContext";
 
 const Skills = () => {
   const fadeInAnimationVariants = {
@@ -37,11 +39,22 @@ const Skills = () => {
     },
   };
 
+  const [themeState] = useTheme();
+
   return (
     <>
-      <main className=" p-3 sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center mt-20">
-        <section className=" bg-color_blue_transparent rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-32 sm:pl-32 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96">
-          <TopHeading title="Tech Stack" />
+      <main className=" p-3  sm:p-5 w-450:p-20 md:p-20 flex flex-col items-center justify-center mt-20">
+        <section
+          className={`${
+            themeState
+              ? "bg-dark-transparent duration-300"
+              : "border-2 border-color_dark_blue  duration-300  "
+          } rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-32 sm:pl-32 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96`}
+        >
+          <TopHeading
+            title="Tech Stack"
+            styleClass={`${themeState ? " color_dark_blue" : ""}`}
+          />
           <TopHeading
             title="Technology that i've been worked on"
             styleClass={"no-underline text-[10px] sm:text-base font-normal"}
@@ -73,7 +86,7 @@ const Skills = () => {
             <TechStack title={"ExpressJS "} icon={expressIcon} />
             <TechStack title={"MongoDB"} icon={mongoDBIcon} />
             <TechStack title={"Mongoose"} icon={mongooseIcon} />
-            <TechStack title={"Firebase"} icon={firebaseIcon} />
+            <TechStack title={"Redux"} icon={reduxIcon} />
           </motion.section>
 
           <motion.section
