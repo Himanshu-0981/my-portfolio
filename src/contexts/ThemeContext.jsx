@@ -5,9 +5,8 @@ const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   const [themeState, setThemeState] = useState(false);
 
-  const darkMode = () => setThemeState(!themeState);
   return (
-    <ThemeContext.Provider value={[themeState, setThemeState, darkMode]}>
+    <ThemeContext.Provider value={[themeState, setThemeState]}>
       {children}
     </ThemeContext.Provider>
   );

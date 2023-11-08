@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import HeroImage from "../components/HeroImage";
 import Icons from "../components/Icons";
 import downArrow from "../assets/downarrow.svg";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Home = () => {
   const arrOfGreetings = [
@@ -21,6 +22,8 @@ const Home = () => {
 
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
   const [displayedGreeting, setDisplayedGreeting] = useState("");
+
+  const [themeState] = useTheme();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,9 +42,15 @@ const Home = () => {
 
   return (
     <>
-      <main className="pt-10 sm:pt-20 bg-color_dark_blue">
+      <main
+        className={`pt-10 sm:pt-20 ${
+          themeState
+            ? "bg-dark-background text-color_white duration-300"
+            : "bg-light-background text-color_dark_blue duration-300"
+        }`}
+      >
         <section className=" relative flex justify-center items-center z-10  flex-col-reverse sm:flex-row">
-          <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-color_white text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
+          <div className="font-semibold text-2xl w-440:text-4xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl  text-center sm:mr-14 sm:text-start transform transition-transform duration-1000 ease-in">
             <h1 className="mt-1 text-5xl font-semibold">
               {displayedGreeting ? displayedGreeting : "Hello"} ,{" "}
             </h1>

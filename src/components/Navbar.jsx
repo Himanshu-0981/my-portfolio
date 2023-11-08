@@ -45,13 +45,15 @@ function Navbar() {
   return (
     <main
       className={`pt-3 pb-3 ${isSticky ? "sticky top-0 " : " "} ${
-        themeState ? "bg-dark-background" : "bg-color_white"
+        themeState
+          ? "bg-dark-background text-color_gray duration-300"
+          : "bg-color_white text-color_black duration-300"
       }`}
       style={{ zIndex: 100 }}
     >
       <nav className="text-center flex justify-between pr-4 pl-4 md:pr-0 md:pl-0  items-center  sm:flex xs:justify-around p-1 text-sm ">
         <div
-          className="font-medium text-color_gray text-base md:text-xl cursor-pointer flex items-center"
+          className="font-medium  text-base md:text-xl cursor-pointer flex items-center"
           onClick={goToHome}
         >
           <span className="text-color_green">H</span>
@@ -70,7 +72,9 @@ function Navbar() {
         >
           <ul
             className={`text-color_gray flex flex-col sm:flex-row pb-2.5 pt-2.5 font-medium  sm:pb-0 sm:pt-0 sm:space-x-6 ${
-              themeState ? "bg-dark-background" : "bg-light-background"
+              themeState
+                ? "bg-dark-background duration-300 "
+                : "bg-light-background text-color_dark_blue duration-300"
             }  sm:bg-white space-y-3 sm:space-y-0`}
           >
             <Link
