@@ -9,7 +9,7 @@ function HeroImage({ cssStyle }) {
   return (
     <>
       <motion.div className="wrapper" ref={constraintsRef}>
-        <div className={`item ${cssStyle}`}>
+        <div className={`item  ${cssStyle}`}>
           <motion.img
             src={mainImg}
             alt="main img"

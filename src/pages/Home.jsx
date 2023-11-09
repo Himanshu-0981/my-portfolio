@@ -82,7 +82,7 @@ const Home = () => {
           <div>
             <HeroImage
               cssStyle={
-                "w-[10rem] w-370:w-[15rem] w-440:w-[25rem] sm:w-[20rem] lg:w-[30rem] 2xl:w-[40rem] -z-10"
+                "scale-x-[-1] w-[10rem] w-370:w-[15rem] w-440:w-[25rem] sm:w-[20rem] lg:w-[30rem] 2xl:w-[40rem] -z-10"
               }
             />
           </div>
