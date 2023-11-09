@@ -31,7 +31,7 @@ function Projects() {
       <div className="flex justify-center items-center  mt-10">
         <div className="w-[80rem] flex justify-center flex-wrap gap-4">
           {projectsData.map((project, index) => (
-            <section className="hover:scale-105 duration-300">
+            <section className="hover:scale-105 duration-300" key={index}>
               <motion.section
                 variants={fadeInAnimationVariants}
                 initial="initial"
