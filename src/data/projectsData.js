@@ -1,36 +1,54 @@
+import e_com from "../assets/e-com.png";
+import google_clone from "../assets/google.png";
+import yt from "../assets/yt.png";
+import movie from "../assets/movie.png";
+import weather_app from "../assets/weather-app.png";
+
 export const projectsData = [
   {
-    title: "Full Stack Twitter Clone",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Ftwitter-clone.jpg&w=384&q=75",
-    description: "Build Full Stack Twitter clone using latest tech stack",
-  },
-  {
-    title: "Java mastery course",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fjava-master.webp&w=384&q=75",
-    description: "Full java course beginner to mastery in just two months",
-  },
-  {
-    title: "Java DSA course",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75",
+    title: "Trend Tribe E Commerce",
+    src: e_com,
     description:
-      "Complete Java DSA with practice set just for rs 1000/month link in description",
+      "Build Full Stack e-commerce shopping app using using latest tech stack and has a fully responsive design",
+    preview: "https://e-commerce-himanshu-0981.vercel.app/",
+    github: "https://github.com/Himanshu-0981/e-commerce",
   },
   {
-    title: "Java DSA course",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75",
+    title: "Google Search Engine Clone",
+    src: google_clone,
     description:
-      "Complete Java DSA with practice set just for rs 1000/month link in description",
+      "Build a Google search engine clone using React , Rapid API and Tailwind CSS.",
+    preview: "https://google-search-engine-clone-iota.vercel.app/",
+    github: "https://github.com/Himanshu-0981/google-search-engine-clone",
   },
   {
-    title: "Java DSA course",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75",
+    title: "Youtube Clone",
+    src: yt,
     description:
-      "Complete Java DSA with practice set just for rs 1000/month link in description",
+      "Youtube clone made using React.js and has amazing features like trending section , search functionality and many more",
+    preview: "https://youtube-clone-woad-psi.vercel.app/",
+    github: "https://github.com/Himanshu-0981/youtube-clone",
   },
   {
-    title: "Java DSA course",
-    src: "https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Fdsa.webp&w=384&q=75",
+    title: "Movie app ",
+    src: movie,
+    description: "Made a movie app which helps you to find the movies ",
+    preview: "https://movie-app-delta-dusky.vercel.app/",
+    github: "https://github.com/Himanshu-0981/Movie-App",
+  },
+  {
+    title: "Dynamic Weather App",
+    src: weather_app,
     description:
-      "Complete Java DSA with practice set just for rs 1000/month link in description",
+      "Build a sleek Weather App for real-time weather updates and forecasts.",
+    preview: "https://dynamic-weather-app-murex.vercel.app/",
+    github: "https://github.com/Himanshu-0981/dynamic-weather-app",
+  },
+  {
+    title: "N/A",
+    src: "",
+    description: "N/A",
+    preview: "",
+    github: "",
   },
 ];

@@ -47,6 +47,7 @@ function Projects() {
                       bg="bg-[#808dad68] text-white mr-1"
                       others="hover:bg-color_white hover:text-color_black mt-10"
                       icon={<FaEye />}
+                      handleClick={() => window.open(project.preview, "_blank")}
                     />
                   }
                   github={
@@ -55,6 +56,7 @@ function Projects() {
                       bg="bg-[#808dad68] text-white ml-1"
                       others="hover:bg-color_white hover:text-color_black mt-10"
                       icon={<FaCode />}
+                      handleClick={() => window.open(project.github, "_blank")}
                     />
                   }
                 />
