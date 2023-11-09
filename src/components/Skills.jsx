@@ -48,7 +48,7 @@ const Skills = () => {
           className={`${
             themeState
               ? "bg-dark-transparent duration-300 border-[#bdc1c600]"
-              : "border border-color_dark_blue  duration-300  "
+              : "bg-[#a4b5db38] shadow-lg border-color_dark_blue  duration-300  "
           } rounded-lg pb-10 pt-5 pr-2 pl-2 xs:pr-5 xs:pl-5 sm:pr-32 sm:pl-32 md:pr-40 md:pl-40 2xl:pl-96 2xl:pr-96`}
         >
           <TopHeading

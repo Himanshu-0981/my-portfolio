@@ -5,8 +5,11 @@ import TopHeading from "../components/TopHeading";
 import ProjectCards from "../components/ProjectCard";
 import Button from "../components/Button";
 import { projectsData } from "../data/projectsData";
+import { useTheme } from "../contexts/ThemeContext";
 
 function Projects() {
+  const [themeState] = useTheme();
+
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
